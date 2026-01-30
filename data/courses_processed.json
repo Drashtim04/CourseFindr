@@ -1,0 +1,302 @@
+[
+    {
+        "id": 1,
+        "title": "Complete Python Bootcamp: From Zero to Hero",
+        "instructor": "John Smith",
+        "rating": 4.7,
+        "rating_count": 152000,
+        "duration": 35,
+        "price": 19.99,
+        "difficulty": "beginner",
+        "tags": [
+            "programming",
+            "python",
+            "data science",
+            "automation"
+        ],
+        "url": "https://www.udemy.com/course/complete-python-bootcamp/",
+        "image": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=300&q=60",
+        "value_score": 0.23511755877938972,
+        "is_top_pick": true
+    },
+    {
+        "id": 2,
+        "title": "The Web Developer Bootcamp",
+        "instructor": "Colt Steele",
+        "rating": 4.8,
+        "rating_count": 205000,
+        "duration": 63,
+        "price": 24.99,
+        "difficulty": "beginner",
+        "tags": [
+            "web development",
+            "html",
+            "css",
+            "javascript",
+            "node"
+        ],
+        "url": "https://www.udemy.com/course/the-web-developer-bootcamp/",
+        "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=300&q=60",
+        "value_score": 0.19207683073229292,
+        "is_top_pick": true
+    },
+    {
+        "id": 3,
+        "title": "Machine Learning A-Z: Hands-On Python & R",
+        "instructor": "Kirill Eremenko",
+        "rating": 4.5,
+        "rating_count": 135000,
+        "duration": 44,
+        "price": 29.99,
+        "difficulty": "intermediate",
+        "tags": [
+            "data science",
+            "machine learning",
+            "python",
+            "r",
+            "ai"
+        ],
+        "url": "https://www.udemy.com/course/machinelearning/",
+        "image": "https://images.unsplash.com/photo-1527474305487-b87b222841cc?auto=format&fit=crop&w=300&q=60",
+        "value_score": 0.1500500166722241,
+        "is_top_pick": false
+    },
+    {
+        "id": 4,
+        "title": "React - The Complete Guide",
+        "instructor": "Maximilian Schwarzm\u00fcller",
+        "rating": 4.6,
+        "rating_count": 128000,
+        "duration": 48,
+        "price": 19.99,
+        "difficulty": "intermediate",
+        "tags": [
+            "web development",
+            "javascript",
+            "react",
+            "frontend"
+        ],
+        "url": "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
+        "image": "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?auto=format&fit=crop&w=300&q=60",
+        "value_score": 0.23011505752876438,
+        "is_top_pick": false
+    },
+    {
+        "id": 5,
+        "title": "Advanced CSS and Sass",
+        "instructor": "Jonas Schmedtmann",
+        "rating": 4.8,
+        "rating_count": 42000,
+        "duration": 28,
+        "price": 16.99,
+        "difficulty": "intermediate",
+        "tags": [
+            "web development",
+            "css",
+            "sass",
+            "design"
+        ],
+        "url": "https://www.udemy.com/course/advanced-css-and-sass/",
+        "image": "https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?auto=format&fit=crop&w=300&q=60",
+        "value_score": 0.2825191288993526,
+        "is_top_pick": true
+    },
+    {
+        "id": 6,
+        "title": "JavaScript: Understanding the Weird Parts",
+        "instructor": "Anthony Alicea",
+        "rating": 4.9,
+        "rating_count": 65000,
+        "duration": 12,
+        "price": 14.99,
+        "difficulty": "advanced",
+        "tags": [
+            "javascript",
+            "web development",
+            "frontend"
+        ],
+        "url": "https://www.udemy.com/course/understand-javascript/",
+        "image": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?auto=format&fit=crop&w=300&q=60",
+        "value_score": 0.3268845897264843,
+        "is_top_pick": true
+    },
+    {
+        "id": 7,
+        "title": "AWS Certified Solutions Architect - Associate",
+        "instructor": "Ryan Kroonenburg",
+        "rating": 4.7,
+        "rating_count": 75000,
+        "duration": 25,
+        "price": 29.99,
+        "difficulty": "advanced",
+        "tags": [
+            "cloud",
+            "aws",
+            "devops",
+            "certification"
+        ],
+        "url": "https://www.udemy.com/course/aws-certified-solutions-architect-associate/",
+        "image": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=300&q=60",
+        "value_score": 0.15671890630210072,
+        "is_top_pick": true
+    },
+    {
+        "id": 8,
+        "title": "The Complete Digital Marketing Course",
+        "instructor": "Rob Percival",
+        "rating": 4.5,
+        "rating_count": 55000,
+        "duration": 52,
+        "price": 24.99,
+        "difficulty": "beginner",
+        "tags": [
+            "marketing",
+            "seo",
+            "social media",
+            "analytics"
+        ],
+        "url": "https://www.udemy.com/course/the-complete-digital-marketing-course/",
+        "image": "https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&w=300&q=60",
+        "value_score": 0.18007202881152462,
+        "is_top_pick": false
+    },
+    {
+        "id": 9,
+        "title": "iOS 14 & Swift 5 - The Complete iOS App Development",
+        "instructor": "Angela Yu",
+        "rating": 4.8,
+        "rating_count": 34000,
+        "duration": 55,
+        "price": 34.99,
+        "difficulty": "intermediate",
+        "tags": [
+            "mobile",
+            "ios",
+            "swift",
+            "app development"
+        ],
+        "url": "https://www.udemy.com/course/ios-13-app-development-bootcamp/",
+        "image": "https://images.unsplash.com/photo-1621839673705-6617adf9e890?auto=format&fit=crop&w=300&q=60",
+        "value_score": 0.1371820520148614,
+        "is_top_pick": true
+    },
+    {
+        "id": 10,
+        "title": "Angular - The Complete Guide",
+        "instructor": "Maximilian Schwarzm\u00fcller",
+        "rating": 4.6,
+        "rating_count": 98000,
+        "duration": 36,
+        "price": 19.99,
+        "difficulty": "intermediate",
+        "tags": [
+            "web development",
+            "angular",
+            "javascript",
+            "frontend"
+        ],
+        "url": "https://www.udemy.com/course/the-complete-guide-to-angular-2/",
+        "image": "https://images.unsplash.com/photo-1593720219276-0b1eacd0aef4?auto=format&fit=crop&w=300&q=60",
+        "value_score": 0.23011505752876438,
+        "is_top_pick": false
+    },
+    {
+        "id": 11,
+        "title": "Modern JavaScript From The Beginning",
+        "instructor": "Brad Traversy",
+        "rating": 4.7,
+        "rating_count": 42000,
+        "duration": 22,
+        "price": 0.0,
+        "difficulty": "beginner",
+        "tags": [
+            "javascript",
+            "web development",
+            "es6"
+        ],
+        "url": "https://www.udemy.com/course/modern-javascript-from-the-beginning/",
+        "image": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?auto=format&fit=crop&w=300&q=60",
+        "value_score": 47.0,
+        "is_top_pick": true
+    },
+    {
+        "id": 12,
+        "title": "Advanced SQL Database Administration",
+        "instructor": "David Kim",
+        "rating": 4.5,
+        "rating_count": 12000,
+        "duration": 18,
+        "price": 129.99,
+        "difficulty": "advanced",
+        "tags": [
+            "database",
+            "sql",
+            "mysql",
+            "postgresql"
+        ],
+        "url": "https://www.udemy.com/course/advanced-sql-database-administration/",
+        "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=300&q=60",
+        "value_score": 0.03461804754211862,
+        "is_top_pick": false
+    },
+    {
+        "id": 13,
+        "title": "Financial Modeling for Business Analysts",
+        "instructor": "Sarah Johnson",
+        "rating": 4.7,
+        "rating_count": 25000,
+        "duration": 30,
+        "price": 89.99,
+        "difficulty": "intermediate",
+        "tags": [
+            "finance",
+            "excel",
+            "business",
+            "modeling"
+        ],
+        "url": "https://www.udemy.com/course/financial-modeling-for-business/",
+        "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=300&q=60",
+        "value_score": 0.05222802533614847,
+        "is_top_pick": true
+    },
+    {
+        "id": 14,
+        "title": "Blockchain Development Fundamentals",
+        "instructor": "Michael Chen",
+        "rating": 4.6,
+        "rating_count": 18000,
+        "duration": 22,
+        "price": 49.99,
+        "difficulty": "advanced",
+        "tags": [
+            "blockchain",
+            "crypto",
+            "ethereum",
+            "web3"
+        ],
+        "url": "https://www.udemy.com/course/blockchain-development-fundamentals/",
+        "image": "https://images.unsplash.com/photo-1639762681057-408e52192e55?auto=format&fit=crop&w=300&q=60",
+        "value_score": 0.09201840368073613,
+        "is_top_pick": false
+    },
+    {
+        "id": 15,
+        "title": "Banking Operations and Risk Management",
+        "instructor": "Robert Williams",
+        "rating": 4.4,
+        "rating_count": 9500,
+        "duration": 40,
+        "price": 75.99,
+        "difficulty": "intermediate",
+        "tags": [
+            "banking",
+            "finance",
+            "risk",
+            "compliance"
+        ],
+        "url": "https://www.udemy.com/course/banking-operations-and-risk-management/",
+        "image": "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=300&q=60",
+        "value_score": 0.057902355573101735,
+        "is_top_pick": false
+    }
+]

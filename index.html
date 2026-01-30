@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CourseFindr - AI-Powered Learning Path</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <span>CourseFindr</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#courses" class="nav-link">Explore</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+            <div id="auth-status">
+                <button id="login-btn" class="btn btn-outline">Log In</button>
+                <button id="signup-btn" class="btn btn-primary">Get Started</button>
+
+                <div id="user-profile" class="hidden">
+                    <div class="user-info">
+                        <span id="username-display"></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="#my-learning" id="my-learning-btn"><i class="fas fa-book-reader"></i> My Learning</a>
+                        <a href="#bookmarks" id="bookmarks-btn"><i class="fas fa-heart"></i> Saved Courses</a>
+                        <div class="divider"></div>
+                        <button id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero-content">
+                <h1>Unlock Your Potential with <br><span class="highlight">Data-Driven Recommendations</span></h1>
+                <p>Discover courses tailored to your unique interests and career goals using our intelligent
+                    recommendation engine.</p>
+                <div class="hero-cta">
+                    <a href="#courses" class="btn btn-lg btn-primary">Find Your Course</a>
+                    <a href="#about" class="btn btn-lg btn-secondary"><i class="fas fa-play"></i> How it Works</a>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Curated Courses</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5k+</span>
+                        <span class="stat-label">Active Learners</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.8</span>
+                        <span class="stat-label">Average Rating</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Abstract 3D shape or illustration can go here -->
+                <div class="floating-card card-1">
+                    <i class="fab fa-python"></i>
+                    <span>Python Masterclass</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fab fa-react"></i>
+                    <span>React Specialized</span>
+                </div>
+                <div class="pattern-grid"></div>
+            </div>
+        </header>
+
+        <!-- Features / About Section -->
+        <section id="about" class="features-section">
+            <div class="section-header">
+                <h2>Why Choose CourseFindr?</h2>
+                <p>Powered by advanced algorithms to personalize your learning journey.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fas fa-robot"></i></div>
+                    <h3>AI-Driven</h3>
+                    <p>Our algorithms analyze your interests to suggest the perfect match.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+                    <h3>Data Backed</h3>
+                    <p>Courses are ranked based on real-world data, ratings, and trends.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fas fa-layer-group"></i></div>
+                    <h3>Comprehensive</h3>
+                    <p>From Web Dev to Data Science, we cover the most in-demand skills.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personalized Recommendations (Hidden by default) -->
+        <section id="recommended-section" class="courses-section hidden">
+            <div class="section-header">
+                <h2><i class="fas fa-sparkles"></i> Recommended For You</h2>
+                <p>Based on your interest in <span id="user-interests-display" class="highlight-text">Technology</span>
+                </p>
+            </div>
+            <div id="recommended-grid" class="courses-grid">
+                <!-- Dynamic Content -->
+            </div>
+        </section>
+
+        <!-- Main Course List -->
+        <main id="courses" class="main-content">
+            <section class="filters-sidebar">
+                <div class="filter-header">
+                    <h3><i class="fas fa-filter"></i> Filters</h3>
+                    <button id="clear-filters">Clear All</button>
+                </div>
+
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Search Python, React...">
+                </div>
+
+                <div class="filter-group">
+                    <label>Price Range</label>
+                    <select id="price-filter">
+                        <option value="all">All Prices</option>
+                        <option value="free">Free</option>
+                        <option value="paid">Paid</option>
+                        <option value="0-25">$0 - $25</option>
+                        <option value="25-50">$25 - $50</option>
+                        <option value="50+">$50+</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Duration</label>
+                    <select id="duration-filter">
+                        <option value="all">Any Duration</option>
+                        <option value="short">Short (< 3h)</option>
+                        <option value="medium">Medium (3-6h)</option>
+                        <option value="long">Long (6h+)</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Difficulty</label>
+                    <div class="checkbox-group">
+                        <label class="custom-checkbox">
+                            <input type="radio" name="difficulty" value="all" checked>
+                            <span class="checkmark"></span>
+                            All Levels
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="radio" name="difficulty" value="beginner">
+                            <span class="checkmark"></span>
+                            Beginner
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="radio" name="difficulty" value="intermediate">
+                            <span class="checkmark"></span>
+                            Intermediate
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="radio" name="difficulty" value="advanced">
+                            <span class="checkmark"></span>
+                            Advanced
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="courses-display">
+                <div class="courses-header">
+                    <h2>Explore All Courses</h2>
+                    <span id="results-count">Showing all courses</span>
+                </div>
+
+                <div id="courses-grid" class="courses-grid">
+                    <!-- Courses will be populated here dynamically -->
+                </div>
+
+                <div id="loading" class="hidden">
+                    <div class="spinner"></div>
+                </div>
+
+                <div id="no-results" class="hidden">
+                    <img src="https://cdni.iconscout.com/illustration/premium/thumb/sorry-item-not-found-3328225-2809510.png"
+                        alt="No results">
+                    <p>No courses found matching your filters.</p>
+                    <button class="btn btn-primary" onclick="resetFilters()">Reset Filters</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Auth Modal -->
+        <div id="auth-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-header">
+                    <div class="tabs">
+                        <button class="tab-btn active" id="login-tab">Log In</button>
+                        <button class="tab-btn" id="signup-tab">Sign Up</button>
+                    </div>
+                </div>
+
+                <!-- Login Form -->
+                <form id="login-form" class="auth-form">
+                    <h2>Welcome Back!</h2>
+                    <p class="subtitle">Log in to access your recommendations.</p>
+                    <div class="form-group">
+                        <label for="login-email">Email Address</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="login-email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="login-password" placeholder="••••••••" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Log In</button>
+                    <p id="login-error" class="error-message"></p>
+                </form>
+
+                <!-- Sign Up Form -->
+                <form id="signup-form" class="auth-form hidden">
+                    <h2>Create Account</h2>
+                    <p class="subtitle">Join us to start learning today.</p>
+
+                    <!-- Step 1: Basic Info -->
+                    <div class="signup-step step-1">
+                        <div class="form-group">
+                            <label for="signup-username">Full Name</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="signup-username" placeholder="John Doe" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email Address</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="signup-email" placeholder="you@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="signup-password" placeholder="Create a strong password"
+                                    required>
+                            </div>
+                        </div>
+
+                        <!-- New Personalization Section -->
+                        <div class="form-group">
+                            <label>Primary Interest (For Recommendations)</label>
+                            <div class="interest-grid">
+                                <label class="interest-option">
+                                    <input type="radio" name="interest" value="web development" required>
+                                    <span><i class="fas fa-code"></i> Web Dev</span>
+                                </label>
+                                <label class="interest-option">
+                                    <input type="radio" name="interest" value="data science">
+                                    <span><i class="fas fa-database"></i> Data Science</span>
+                                </label>
+                                <label class="interest-option">
+                                    <input type="radio" name="interest" value="python">
+                                    <span><i class="fab fa-python"></i> Python</span>
+                                </label>
+                                <label class="interest-option">
+                                    <input type="radio" name="interest" value="design">
+                                    <span><i class="fas fa-paint-brush"></i> Design</span>
+                                </label>
+                                <label class="interest-option">
+                                    <input type="radio" name="interest" value="business">
+                                    <span><i class="fas fa-briefcase"></i> Business</span>
+                                </label>
+                                <label class="interest-option">
+                                    <input type="radio" name="interest" value="lifestyle">
+                                    <span><i class="fas fa-camera"></i> Lifestyle</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                        <p id="signup-error" class="error-message"></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-brain"></i>
+                    <span>CourseFindr</span>
+                    <p>Empowering learners with data-driven course discovery.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Technologies Used</h3>
+                    <ul>
+                        <li><i class="fab fa-python"></i> Python & Pandas</li>
+                        <li><i class="fab fa-js"></i> JavaScript (ES6+)</li>
+                        <li><i class="fas fa-chart-bar"></i> Matplotlib</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CourseFindr. Built for showcasing Full Stack & Data Science skills.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
